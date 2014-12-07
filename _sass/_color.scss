@@ -1,0 +1,29 @@
+a, a:visited {
+    color: $highlight;
+}
+
+.site-title {
+    background: $highlight;
+
+    a, a:visited {
+        color: #FFF;
+    }
+    a:hover {
+        color: #F9F9F9;
+    }
+}
+
+
+.site-footer {
+    background-color: $grey-dark;
+    color: #AAA;
+    box-shadow: 0 24px 24px -12px #000 inset;
+
+    a {
+        color: #FFF;
+    }
+}
+
+.post-meta {
+    color: $grey;
+}

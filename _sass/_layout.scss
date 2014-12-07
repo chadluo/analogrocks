@@ -1,0 +1,152 @@
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 85%;
+    max-width: $content-width;
+    margin-right: auto;
+    margin-left: auto;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/**
+ * Site header
+ */
+ .site-header {
+    // Positioning context for the mobile navigation icon
+    position: relative;
+}
+
+.site-title {
+    font-size: 20vmin;
+    line-height: 1;
+    margin-top: 15vmin;
+    padding: 15vmin 0;
+    text-align: center;
+    font-weight: 700;
+    font-family: $brand-font-family;
+}
+
+
+/**
+ * Site footer
+ */
+ .site-footer {
+    font-family: $brand-font-family;
+    padding: $spacing-unit 0;
+
+    .footer-heading {
+        font-size: $base-font-size;
+        margin: 0;
+        float: right;
+    }
+
+    .links {
+        float: left;
+        margin: 0;
+        @extend %list-reset;
+    }
+
+    .link {
+        float: left;
+        list-style: none;
+    }
+
+    .link + .link::before {
+        content: "/";
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+}
+
+/**
+ * Page content
+ */
+ .page-content {
+    margin: $spacing-unit 0;
+}
+
+.page-heading {
+    font-size: 20px;
+}
+
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+.post-meta {
+    font-size: $small-font-size;
+}
+
+.post-link {
+    display: block;
+    font-size: 24px;
+}
+
+
+
+/**
+ * Posts
+ */
+ .post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    font-size: $title-font-size;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+}
+
+.page-content {
+    .post-list {
+        @extend %list-reset;
+        .post-link {
+            float: left;
+        }
+        .post-meta {
+            float: right;
+        }
+    }
+}
+
+hr {
+    text-align: center;
+    line-height: 2rem;
+    height: 2rem;
+    border: none;
+    margin: 2rem 0;
+
+    &:before {
+        content: "A. R.";
+        font-size: 1rem;
+        font-family: $brand-font-family;
+        opacity: 0.5;
+    }
+}
+
+%list-reset {
+    padding-left: 0;
+}
