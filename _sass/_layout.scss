@@ -7,6 +7,21 @@ a {
     text-decoration: none;
 }
 
+hr {
+    border: none;
+    text-align: center;
+    line-height: $base-vert-space;
+    height: $base-vert-space;
+    margin: $base-vert-space 0;
+
+    &:before {
+        content: "A. R.";
+        font-size: 1rem;
+        font-family: $brand-font-family;
+        opacity: 0.5;
+    }
+}
+
 .wrapper {
     width: 85%;
     max-width: $content-width;
@@ -19,132 +34,85 @@ a {
     }
 }
 
-/**
- * Site header
- */
- .site-header {
-    // Positioning context for the mobile navigation icon
-    position: relative;
+.site-header {
+    padding: 25vmin 0 20vmin;
+    margin: 0;
+    @include media-query($mobile) {
+        & {
+            padding: 5vmin 0;
+        }
+    }
 }
 
 .site-title {
     font-size: 20vmin;
     line-height: 1;
-    margin-top: 15vmin;
-    padding: 15vmin 0;
     text-align: center;
     font-weight: 700;
     font-family: $brand-font-family;
+    margin: 0;
 }
 
-
-/**
- * Site footer
- */
- .site-footer {
-    font-family: $brand-font-family;
-    padding: $spacing-unit 0;
-
-    .footer-heading {
-        font-size: $base-font-size;
-        margin: 0;
-        float: right;
-    }
-
-    .links {
-        float: left;
-        margin: 0;
-        @extend %list-reset;
-    }
-
-    .link {
-        float: left;
-        list-style: none;
-    }
-
-    .link + .link::before {
-        content: "/";
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-    }
+.page-content {
+    padding-bottom: $base-vert-space;
 }
 
-/**
- * Page content
- */
- .page-content {
-    margin: $spacing-unit 0;
-}
+.post-title {
+    font-size: 2rem;
+    line-height: 1;
+    margin: 0;
+    padding-bottom: 1rem;
 
-.page-heading {
-    font-size: 20px;
-}
-
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
+    @include media-query($mobile) {
+        font-size: 1.5rem;
     }
 }
 
 .post-meta {
-    font-size: $small-font-size;
+    font-size: 0.875rem;
 }
 
-.post-link {
-    display: block;
-    font-size: 24px;
+.post-list {
+    margin: 0;
+    list-style: none;
+
+    @extend %list-reset;
 }
 
-
-
-/**
- * Posts
- */
- .post-header {
-    margin-bottom: $spacing-unit;
+.post-list-link {
+    float: left;
 }
 
-.post-title {
-    font-size: $title-font-size;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
+.post-list-meta {
+    float: right;
 }
 
-.post-content {
-    margin-bottom: $spacing-unit;
+.site-footer {
+    font-family: $brand-font-family;
+    padding: $base-vert-space 0;
 }
 
-.page-content {
-    .post-list {
-        @extend %list-reset;
-        .post-link {
-            float: left;
-        }
-        .post-meta {
-            float: right;
-        }
-    }
+.footer-heading {
+    font-size: $base-font-size;
+    margin: 0;
+    float: right;
 }
 
-hr {
-    text-align: center;
-    line-height: 2rem;
-    height: 2rem;
-    border: none;
-    margin: 2rem 0;
+.footer-links {
+    float: left;
+    margin: 0;
+    @extend %list-reset;
+}
 
-    &:before {
-        content: "A. R.";
-        font-size: 1rem;
-        font-family: $brand-font-family;
-        opacity: 0.5;
-    }
+.footer-link {
+    float: left;
+    list-style: none;
+}
+
+.footer-link + .footer-link::before {
+    content: "/";
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
 %list-reset {

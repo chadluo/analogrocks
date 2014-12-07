@@ -1,28 +1,21 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
 <!-- latest post -->
-  <article class="latest">
+<article class="latest">
     {% for post in site.posts limit:1 %}
     <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <p class="post-meta">{{ post.date | date: "%Y 年 %-m 月 %-d 日" }}</p>
     {{ post.content }}
     {% endfor %}
-  </article>
-
-  <hr>
-
+</article>
+<hr>
 <!-- rest posts -->
-  <ul class="post-list">
+<ul class="post-list">
     {% for post in site.posts offset: 1 %}
-      <li>
+    <li>
         <a class="post-list-link" href="{{ post.url }}">{{ post.title }}</a>
-        <span class="post-meta">{{ post.date | date: "%Y 年 %-m 月 %-d 日" }}</span>
-      </li>
+        <span class="post-list-meta">{{ post.date | date: "%Y 年 %-m 月 %-d 日" }}</span>
+    </li>
     {% endfor %}
-  </ul>
-
-</div>
+</ul>

@@ -2,28 +2,44 @@ a, a:visited {
     color: $highlight;
 }
 
+a:hover {
+    color: $highlighter;
+}
+
+body {
+    background-color: $grey-dark;
+}
+
+.site-header, .page-content {
+    background-color: #FFF;
+}
+
 .site-title {
-    background: $highlight;
+    a, a:visited {
+        color: $grey-dark;
+    }
+    a:hover {
+        color: $highlight;
+    }
+}
+
+.site-footer {
+    color: #AAA;
+    text-shadow: 0 1px 2px #000;
 
     a, a:visited {
         color: #FFF;
     }
+
     a:hover {
-        color: #F9F9F9;
+        color: $grey-light;
+    }
+
+    .footer-heading {
+        font-weight: normal;
     }
 }
 
-
-.site-footer {
-    background-color: $grey-dark;
-    color: #AAA;
-    box-shadow: 0 24px 24px -12px #000 inset;
-
-    a {
-        color: #FFF;
-    }
-}
-
-.post-meta {
+.post-meta, .post-list-meta {
     color: $grey;
 }
