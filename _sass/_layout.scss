@@ -36,16 +36,21 @@ hr {
 
 .site-header {
     padding: 25vmin 0 20vmin;
-    margin: 0;
+    margin: 1vmin 0 0 0;
     @include media-query($mobile) {
         & {
-            padding: 5vmin 0;
+            padding: 15vmin 0;
         }
     }
 }
 
 .site-title {
     font-size: 20vmin;
+    @include media-query($mobile) {
+        & {
+            font-size: 25vmin;
+        }
+    }
     line-height: 1;
     text-align: center;
     font-weight: 700;
@@ -61,7 +66,7 @@ hr {
     font-size: 2rem;
     line-height: 1;
     margin: 0;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 
     @include media-query($mobile) {
         font-size: 1.5rem;
