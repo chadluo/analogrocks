@@ -1,10 +1,10 @@
 <footer class="site-footer">
-	<div class="wrapper">
-		<ul class="footer-links">
-			{% for link in site.data.links %}
-			<li class="footer-link"><a href="{{ link.url }}">{{ link.title }}</a></li>
-			{% endfor %}
-		</ul>
-		<h2 class="footer-heading">&copy; <a href="/">Analog Rocks.</a></h2>
-	</div>
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-11 col-sm-offset-0 col-sm-8 col-sm-push-4">
+      {% for link in site.data.links %}<a class="footer-link tk-apolline-sc" href="{{ link.url }}">{{ link.title }}</a>{% endfor %}
+    </div>
+    <div class="footer-title col-xs-offset-1 col-xs-11 col-sm-offset-0 col-sm-4 col-sm-pull-8">
+      <a class="tk-apolline-sc" href="/">analog rocks.</a>
+    </div>
+  </div>
 </footer>

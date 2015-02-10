@@ -1,8 +1,10 @@
 ---
 layout: default
 ---
-<article class="post">
-    <h2 class="post-title">{{ page.title }}</h2>
-    <p class="post-meta">{{ page.date | date: "%Y 年 %-m 月 %-d 日" }}</p>
+<article class="post row">
+  <time datetime="{{ page.date | date: "%Y-%-m-%-d" }}" class="meta tk-apolline col-xs-3 col-sm-4">{{ page.date | date: "%b %-d, %Y" }}</time>
+  <div class="col-xs-9 col-sm-8">
+    <h2 class="title">{{ page.title }}</h2>
     {{ content }}
+  </div>
 </article>
