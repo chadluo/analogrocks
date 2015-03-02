@@ -5,7 +5,7 @@ layout: null
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
   <channel>
     <title>{{ site.title | xml_escape }}</title>
-    <itunes:subtitle>{{ site.desc | xml_escape }}</itunes:subtitle>
+    <itunes:subtitle>模拟摇滚</itunes:subtitle>
     <itunes:summary>{{ site.desc | xml_escape }}</itunes:summary>
     <description>{{ site.desc | xml_escape }}</description>
     <link>{{ site.url }}</link>
