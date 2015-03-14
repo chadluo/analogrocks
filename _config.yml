@@ -7,3 +7,6 @@ desc: "模拟摇滚是一个播客节目。这个节目的主持人都是坏人�
 # Build settings
 markdown: kramdown
 permalink: /episodes/:year-:month-:day.html
+
+sass:
+    style: :compressed
