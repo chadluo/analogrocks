@@ -29,7 +29,7 @@ layout: null
       <title>#{{ page.ep }}. {{ post.title | xml_escape }}</title>
       <itunes:author>Analog Rocks.</itunes:author>
       <itunes:subtitle></itunes:subtitle>
-      <itunes:summary><![CDATA[{{ post.excerpt }}]]></itunes:summary>
+      <itunes:summary><![CDATA[{{ post.excerpt | xml_escape }}]]></itunes:summary>
       <description><![CDATA[{{ post.content | xml_escape }}]]></description>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       <link>{{ post.url | prepend: site.url }}</link>
