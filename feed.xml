@@ -5,8 +5,6 @@ layout: null
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
   <channel>
     <title>{{ site.title | xml_escape }}</title>
-    <itunes:subtitle>模拟摇滚</itunes:subtitle>
-    <itunes:summary>{{ site.desc | xml_escape }}</itunes:summary>
     <description>{{ site.desc | xml_escape }}</description>
     <link>{{ site.url }}</link>
     <language>zh-CN</language>
@@ -14,34 +12,33 @@ layout: null
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <itunes:author>Analog Rockers.</itunes:author>
+    <itunes:subtitle>模拟摇滚</itunes:subtitle>
+    <itunes:summary>{{ site.desc | xml_escape }}</itunes:summary>
+    <itunes:author>Analog Rocks.</itunes:author>
     <itunes:owner>
       <itunes:name>Analog Rocks.</itunes:name>
       <itunes:email>us@analog.rocks</itunes:email>
     </itunes:owner>
-    <!--<itunes:image href="TODO"></itunes:image>-->
+    <itunes:image href="{{ site.baseurl | prepend: site.url }}analogrocks.png" />
     <itunes:category text="Technology">
       <itunes:category text="Gadgets" />
     </itunes:category>
-    {% for post in site.posts limit:10 %}
+    {% for post in site.posts %}
     <item>
-      <title>{{ post.title | xml_escape }}</title>
+      <title>#{{ page.ep }}. {{ post.title | xml_escape }}</title>
+      <itunes:author>Analog Rocks.</itunes:author>
+      <itunes:subtitle></itunes:subtitle>
+      <itunes:summary>{{ post.excerpt }}</itunes:summary>
       <description>{{ post.content | xml_escape }}</description>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-      <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-      <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-      {% for tag in post.tags %}
-      <category>{{ tag | xml_escape }}</category>
-      {% endfor %}
-      {% for cat in post.categories %}
-      <category>{{ cat | xml_escape }}</category>
-      {% endfor %}
-      <itunes:author></itunes:author>
-      <itunes:subtitle></itunes:subtitle>
-      <itunes:summary></itunes:summary>
-      <itunes:image />
-      <itunes:enclosure length="" type="audio/mpeg" url="" />
-      <itunes:duration></itunes:duration>
+      <link>{{ post.url | prepend: site.url }}</link>
+      <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
+      {% for tag in post.tags %}<category>{{ tag | xml_escape }}</category>{% endfor %}
+      {% for cat in post.categories %}<category>{{ cat | xml_escape }}</category>{% endfor %}
+      <itunes:image href="{{ site.baseurl | prepend: site.url }}analogrocks.png" />
+      <enclosure length="{{ post.len }}" type="audio/mpeg" url="{{ post.rec }}" />
+      <itunes:duration>4:41</itunes:duration>
+      <itunes:explicit>clean</itunes:explicit>
     </item>
     {% endfor %}
   </channel>

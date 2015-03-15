@@ -4,7 +4,7 @@
 html, body, h1, h2, p {
   font-size: $base-font-size;
   font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans GB",
-  "Source Han Sans", "Arial", sans-serif;
+  "Source Han Sans", "Microsoft YaHei", "Arial", sans-serif;
   line-height: $v;
   margin-top: 0;
   margin-bottom: 0;
@@ -25,8 +25,32 @@ a:hover { color: $highlight; text-decoration: none; }
   margin-bottom: $v*2;
 }
 
+.post a {
+}
+
 .post p + p {
   text-indent: 1em;
+}
+
+.post ul {
+  margin: 0;
+  padding-left: 2em;
+}
+
+.post li {
+  list-style: upper-roman;
+}
+
+.post hr {
+  line-height: $v;
+  height: $v;
+  border: none;
+  margin: $v 0;
+}
+
+.post hr::before {
+  content: "＊";
+  @extend .gf-mate-sc;
 }
 
 ////////////////////////////////
@@ -39,6 +63,8 @@ a:hover { color: $highlight; text-decoration: none; }
 .site-title {
   font-weight: normal;
   text-transform: uppercase;
+  font-size: $base-font-size * 1.4;
+  line-height: $v * 2;
   letter-spacing: 0.2em;
 }
 
@@ -47,14 +73,6 @@ a:hover { color: $highlight; text-decoration: none; }
 
 .site-footer {
   margin-bottom: $v*2;
-  // font-variant: small-caps;
-  letter-spacing: 1.5px;
-}
-
-.footer-link + .footer-link::before {
-  content: "·";
-  margin: 0 0.3em;
-  padding: 0;
 }
 
 ////////////////////////////////

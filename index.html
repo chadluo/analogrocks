@@ -4,9 +4,9 @@ layout: default
 <!-- latest post -->
 {% for post in site.posts limit:1 %}
 <article class="post row">
-  <time datetime="{{ post.date | date: "%Y-%-m-%-d" }}" class="meta tk-apolline col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-4">{{ post.date | date: "%b %-d, %Y" }}</time>
-  <div class="col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-8">
-    <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <time datetime="{{ post.date | date: "%Y-%-m-%-d" }}" class="meta gf-mate col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-4">{{ post.date | date: "%b %-d, %Y" }}</time>
+  <div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6">
+    <h2 class="title"><a href="{{ post.url }}">#{{ post.ep }}. {{ post.title }}</a></h2>
     {{ post.content }}
   </div>
 </article>

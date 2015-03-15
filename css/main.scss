@@ -7,9 +7,17 @@ $base-font-size:   14px;
 $v:                19px;  // base vertical unit
 
 $highlight:        #1d697c;
-$grey:             #171717;
+$grey:             #212121;
 
 @import
   "bs",
-  "font",
   "style";
+
+.gf-mate {
+    font-family: 'Mate';
+}
+
+.gf-mate-sc {
+    font-family: 'Mate SC';
+    letter-spacing: 0.15em;
+}
