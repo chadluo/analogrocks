@@ -13,7 +13,7 @@ layout: null
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <atom:link href="http://analog.rocks/feed.xml" rel="self" type="application/rss+xml" />
     <itunes:subtitle>模拟摇滚</itunes:subtitle>
-    <itunes:summary>{{ site.desc | xml_escape }}</itunes:summary>
+    <itunes:summary><![CDATA[{{ site.desc | xml_escape }}]]></itunes:summary>
     <itunes:author>Analog Rocks.</itunes:author>
     <itunes:owner>
       <itunes:name>Analog Rocks.</itunes:name>
@@ -23,13 +23,14 @@ layout: null
     <itunes:category text="Technology">
       <itunes:category text="Gadgets" />
     </itunes:category>
+    <itunes:explicit>clean</itunes:explicit>
     {% for post in site.posts %}
     <item>
       <title>#{{ page.ep }}. {{ post.title | xml_escape }}</title>
       <itunes:author>Analog Rocks.</itunes:author>
       <itunes:subtitle></itunes:subtitle>
-      <itunes:summary>{{ post.excerpt }}</itunes:summary>
-      <description>{{ post.content | xml_escape }}</description>
+      <itunes:summary><![CDATA[{{ post.excerpt }}]]></itunes:summary>
+      <description><![CDATA[{{ post.content | xml_escape }}]]></description>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       <link>{{ post.url | prepend: site.url }}</link>
       <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
