@@ -11,7 +11,6 @@ layout: null
     <copyright>{{ site.title | xml_escape }}</copyright>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     <itunes:subtitle>模拟摇滚</itunes:subtitle>
     <itunes:summary>{{ site.desc | xml_escape }}</itunes:summary>
     <itunes:author>Analog Rocks.</itunes:author>
