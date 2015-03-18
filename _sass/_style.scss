@@ -45,12 +45,7 @@ a:hover { color: $highlight; text-decoration: none; }
   line-height: $v;
   height: $v;
   border: none;
-  margin: $v 0;
-}
-
-.post hr::before {
-  content: "＊";
-  @extend .gf-mate-sc;
+  margin: 0;
 }
 
 ////////////////////////////////
