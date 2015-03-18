@@ -25,6 +25,11 @@ a:hover { color: $highlight; text-decoration: none; }
   margin-bottom: $v*2;
 }
 
+.post audio {
+  height: $v;
+  margin: $v 0;
+}
+
 .post a {
 }
 
