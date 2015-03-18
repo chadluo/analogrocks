@@ -26,7 +26,7 @@ layout: null
     <itunes:explicit>clean</itunes:explicit>
     {% for post in site.posts %}
     <item>
-      <title>#{{ page.ep }}. {{ post.title | xml_escape }}</title>
+      <title>#{{ post.ep }}. {{ post.title | xml_escape }}</title>
       <itunes:author>Analog Rocks.</itunes:author>
       <itunes:subtitle></itunes:subtitle>
       <itunes:summary><![CDATA[{{ post.excerpt | xml_escape }}]]></itunes:summary>
