@@ -3,11 +3,9 @@ layout: default
 ---
 <article class="post row">
   <time datetime="{{ page.date | date: "%Y-%-m-%-d" }}" class="meta gf-mate col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-4">{{ page.date | date: "%b %-d, %Y" }}</time>
-  <div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6">
+  <div class="col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-8">
     <h2 class="title">#{{ page.ep }}. {{ page.title }}</h2>
+    <audio controls="controls"><source type="audio/mp3" src="{{ page.rec }}"></audio>
     {{ content }}
-    <audio controls>
-      <source type="audio/mp3" src="{{ page.rec }}">
-    </audio>
   </div>
 </article>

@@ -4,7 +4,7 @@
 html, body, h1, h2, p {
   font-size: $base-font-size;
   font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans GB",
-  "Source Han Sans", "Microsoft YaHei", "Arial", sans-serif;
+  "Source Han Sans", "Microsoft YaHei", sans-serif;
   line-height: $v;
   margin-top: 0;
   margin-bottom: 0;
@@ -21,36 +21,38 @@ a:hover { color: $highlight; text-decoration: none; }
   margin-bottom: $v;
 }
 
+
 .post {
   margin-bottom: $v*2;
-}
 
-.post audio {
-  height: $v;
-  margin: $v 0;
-}
+  & audio {
+    display: block;
+    height: $v;
+    line-height: $v;
+    margin-bottom: $v;
+    width: 80%;
+  }
 
-.post a {
-}
+  & p + p {
+    text-indent: 1em;
+  }
 
-.post p + p {
-  text-indent: 1em;
-}
+  & ul, & ol {
+    margin: 0;
+    padding-left: 2em;
+  }
 
-.post ul {
-  margin: 0;
-  padding-left: 2em;
-}
+  & li {
+    list-style: upper-roman;
+  }
 
-.post li {
-  list-style: upper-roman;
-}
+  & hr {
+    line-height: $v;
+    height: $v;
+    border: none;
+    margin: 0;
+  }
 
-.post hr {
-  line-height: $v;
-  height: $v;
-  border: none;
-  margin: 0;
 }
 
 ////////////////////////////////

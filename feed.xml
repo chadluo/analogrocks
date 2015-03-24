@@ -30,7 +30,7 @@ layout: null
       <itunes:author>Analog Rocks.</itunes:author>
       <itunes:subtitle></itunes:subtitle>
       <itunes:summary><![CDATA[{{ post.excerpt | xml_escape }}]]></itunes:summary>
-      <description><![CDATA[{{ post.content | xml_escape }}]]></description>
+      <description><![CDATA[{{ post.content }}]]></description>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       <link>{{ post.url | prepend: site.url }}</link>
       <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
